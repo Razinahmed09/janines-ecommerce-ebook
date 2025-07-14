@@ -496,3 +496,14 @@ $('.multiple-items').slick({
     }
   ]
 });
+
+
+
+
+
+
+// story and voice upload script
+
+
+
+// story and voice upload script

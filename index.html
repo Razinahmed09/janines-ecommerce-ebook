@@ -26,88 +26,16 @@
 
 <body>
   <!-- Start Header -->
-  <header class="cs_site_header cs_style_1 cs_primary_color cs_sticky_header">
-    <div class="cs_main_header">
-      <div class="container-fluid">
-        <div class="cs_main_header_in">
-          <div class="cs_main_header_left">
-            <a class="cs_site_branding" href="index.html">
-              <!-- <img src="assets/img/logo.svg" alt="Logo"> -->
-              Janine's
-            </a>
-          </div>
-          <div class="cs_main_header_center cs_center_full_width">
-            <div class="cs_nav">
-              <div class="cs_nav_list_wrap">
-                <ul class="cs_nav_list">
-                  <li class="">
-                    <a href="index.html">Home</a>
-                    <!-- <ul>
-                      <li><a href="index.html">Lifestyle</a></li>
-                      <li><a href="podcast.html">Podcast</a></li>
-                      <li><a href="creative.html">Creative</a></li>
-                      <li><a href="fashion.html">Fashion</a></li>
-                      <li><a href="cooking.html">Cooking</a></li>
-                      <li><a href="travel.html">Travel</a></li>
-                      <li><a href="dev.html">DEV</a></li>
-                      <li><a href="classic.html">Classic</a></li>
-                      <li><a href="personal.html">Personal</a></li>
-                      <li><a href="masonary.html">Masonary</a></li>
-                    </ul> -->
-                  </li>
-                  <li><a href="#">Health</a></li>
-                  <li><a href="#">About</a></li>
-                  <!-- <li class="menu-item-has-children">
-                    <a href="#">Pages</a>
-                    <ul>
-                      <li><a href="about.html">About Us</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                      <li><a href="episodes.html">Episodes</a></li>
-                      <li><a href="archive.html">Archive</a></li>
-                    </ul>
-                  </li> -->
-                  <li class="">
-                    <a href="#">Blogs</a>
-                    <!-- <ul>
-                      <li><a href="blogs.html">Blog Grid</a></li>
-                      <li><a href="#">Blog Details</a></li>
-                      <li><a href="blog-details-v2.html">Blog Details V2</a></li>
-                      <li><a href="blog-details-v3.html">Blog Details V3</a></li>
-                    </ul> -->
-                  </li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="cs_main_header_right">
-            <div class="cs_header_btns_2">
-              <div class="cs_social_links cs_style_3">
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
-              </div>
-              <button class="cs_search_toggle_btn" type="button">
-                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g>
-                    <path
-                      d="M24.9999 24.0271L18.477 17.5042C20.1714 15.4319 21.0045 12.7876 20.8039 10.1183C20.6033 7.44901 19.3845 4.9589 17.3995 3.16306C15.4144 1.36722 12.8151 0.40303 10.1391 0.469938C7.46312 0.536846 4.91521 1.62973 3.02241 3.52253C1.12961 5.41533 0.036724 7.96324 -0.0301841 10.6392C-0.0970923 13.3152 0.867093 15.9146 2.66294 17.8996C4.45878 19.8846 6.94889 21.1035 9.61819 21.304C12.2875 21.5046 14.9318 20.6715 17.0041 18.9771L23.527 25.5L24.9999 24.0271ZM10.4166 19.25C8.76838 19.25 7.15722 18.7613 5.78681 17.8456C4.4164 16.9299 3.3483 15.6284 2.71757 14.1057C2.08683 12.583 1.92181 10.9074 2.24335 9.29093C2.56489 7.67442 3.35857 6.18956 4.52401 5.02413C5.68944 3.85869 7.1743 3.06502 8.79081 2.74347C10.4073 2.42193 12.0829 2.58696 13.6056 3.21769C15.1283 3.84842 16.4298 4.91652 17.3455 6.28693C18.2612 7.65734 18.7499 9.26851 18.7499 10.9167C18.7474 13.1261 17.8686 15.2442 16.3064 16.8065C14.7441 18.3688 12.6259 19.2475 10.4166 19.25Z"
-                      fill="currentColor" />
-                  </g>
-                  <defs>
-                    <clipPath>
-                      <rect width="25" height="25" fill="white" transform="translate(0 0.5)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div id="navbar-container"></div>
+  <script>
+    // Load navbar
+            fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+               document.getElementById('navbar-container').innerHTML = data;
+            })
+  </script>
+
   <div class="cs_modal_search cs_center">
     <div class="cs_search_overlay cs_header_overlay"></div>
     <form action="#" class="cs_modal_search_form">
@@ -1339,42 +1267,15 @@
   </div>
   <!-- End Instagram Section -->
   <!-- Start Footer Section -->
-  <footer class="cs_footer cs_style_3 cs_primary_bg cs_white_color">
-    <div class="cs_newsletter cs_style_2 cs_primary_bg">
-      <div class="container-fluid">
-        <div class="cs_newsletter_in">
-          <h2 class="cs_newsletter_title cs_white_color cs_fs_90 mb-0 text-center" data-aos="zoom-in"
-            data-aos-duration="1500">Stay Inspired — Subscribe for
-            Exclusive Faith & Wellness Insights</h2>
-          <div class="cs_height_70 cs_height_lg_45"></div>
-          <form action="#" class="cs_newsletter_form" data-aos="fade-down" data-aos-duration="1500">
-            <input type="text" placeholder="Enter email address..." class="cs_newsletter_form_input cs_fs_23">
-            <button class="cs_newsletter_form_btn cs_fs_32" type="submit">Send Now</button>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="cs_footer_in">
-      <div class="container-fluid">
-        <ul class="cs_footer_menu cs_mp_0 cs_fs_23">
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">HEALTH</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">BLOGS</a></li>
-          <li><a href="#">CONTACT</a></li>
-        </ul>
-        <div class="cs_copyright_wrap">
-          <div class="cs_copyright cs_accent_color">© 2025 All Rights Reserved By | Designed By <a
-              href="https://thevisionbrands.com/" target="_blank">The Vision Brands</a></div>
-          <!-- <div class="cs_social_links cs_style_2 cs_fs_23">
-            <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-            <a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
-            <a href="#"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-          </div> -->
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
+  <script>
+    // Load navbar
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+               document.getElementById('footer-container').innerHTML = data;
+            })
+  </script>
   <!-- End Footer Section -->
 
   <!-- Script -->
@@ -1387,7 +1288,6 @@
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
     data-cf-beacon='{"rayId":"95127171da69ce6f","version":"2025.6.2","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"6f756f02820545e3be40ddc6eb6154c3","b":1}'
     crossorigin="anonymous"></script>
-  <script src="https://cdn.lordicon.com/lordicon.js"></script>
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

@@ -4118,6 +4118,390 @@ hr {
 /* about us section */
 
 
+/* my story content css */
+
+.capture-app .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .capture-app .header h1 {
+            color: rgb(0, 0, 0);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .capture-app .header p {
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* .capture-app .capture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        } */
+
+        .photo_parent {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          
+        }
+
+        .capture-app .capture-card {
+            /* background: #bff8eb; */
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border-top: 3px solid #00916c;
+            border-bottom: 3px solid #00916c;
+        }
+        .capture_un{
+          background: #bff8eb;
+          border: none !important;
+        }
+       
+        .capture-app .capture-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            /* background: rgba(255, 255, 255, 0.15); */
+        }
+
+        .capture-app .capture-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .capture-app .capture-card:hover::before {
+            left: 100%;
+        }
+
+        .capture-app .capture-card .card-icon {
+            width: 80px;
+            height: 80px;
+            background: #bff8eb;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .capture-app .capture-card:hover .card-icon {
+            background: #bff8eb;
+            transform: scale(1.1);
+        }
+        .capture_un .card-icon {
+          background-color: white !important; 
+        }
+        .card-icon lord-icon {
+          width: 60px;
+          height: 60px;
+        }
+        .capture-app .capture-card .card-title {
+            color: rgb(0, 0, 0);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            
+        }
+
+        .capture-app .capture-card .card-description {
+            color: rgba(0, 0, 0, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .capture-app .capture-card .upload-area {
+                border: 2px dashed rgb(0 145 108);
+                border-radius: 15px;
+                    padding: 4rem;
+                text-align: center;
+                transition: all 0.3s ease;
+                margin-top: 1rem;
+                background: #07070726;
+        }
+        
+        .capture-app .capture-card .upload-area:hover {
+            border-color: #108f21;
+            background: rgba(255, 255, 255, 0.05);
+            /* color: black; */
+        }
+         .capture-app .capture-card .upload-area p {
+           transition: all 0.3s ease;
+         }
+
+        .capture-app .capture-card .upload-area:hover p {
+          color: black !important;
+        }
+        .capture-app .capture-card .upload-area.drag-over {
+            border-color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        .capture-app .capture-button {
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .capture-app .capture-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+        }
+
+        .capture-app .capture-button:active {
+            transform: translateY(0);
+        }
+
+        .capture-app .capture-button::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .capture-app .capture-button:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .capture-app .journal-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            /* padding: 2rem; */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideInUp 0.8s ease-out 0.3s both;
+        }
+
+        .capture-app .journal-section .journal-title {
+            color: rgb(0, 0, 0);
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .capture-app .journal-section .journal-textarea {
+            width: 100%;
+            min-height: 105px;
+             background: rgb(191 248 235);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 10px;
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            resize: vertical;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .capture-app .journal-section .journal-textarea:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .capture-app .journal-section .journal-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .capture-app .journal-section .voice-recorder {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .capture-app .journal-section .voice-recorder .recording-indicator {
+            width: 12px;
+            height: 12px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            opacity: 0;
+            animation: pulse 1.5s infinite;
+        }
+
+        .capture-app .journal-section .voice-recorder .recording-indicator.active {
+            opacity: 1;
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+         .capture-app .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .upload-area:hover {
+            border-color: #ff6b6b;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .upload-area.drag-over {
+            border-color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+        }
+
+        .saved-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+            
+        }
+
+        .saved-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgb(191 248 235);
+        }
+
+        .saved-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .capture-app .header h1 {
+                font-size: 2rem;
+            }
+
+            .capture-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .capture-card {
+                padding: 1.5rem;
+            }
+        }
+
+/* my story content css */
+
+
 /* collabration section */
 
     .collab-loader {
@@ -5558,6 +5942,11 @@ hr {
       width: 60%;
  }
 /* profile-card-wrapper */
+
+
+.contact-inner .contact-inner h1 {
+    font-weight: 600;
+}
 
 /* contact us */
 
@@ -9772,6 +10161,7 @@ footer .cs_fs_90 {
   position: absolute;
   right: -230px;
   bottom: 0;
+  animation: mymove 4s infinite;
 }
 .cs_hero.cs_style_6 .cs_hero_in {
   display: -webkit-box;
