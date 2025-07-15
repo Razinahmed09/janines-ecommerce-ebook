@@ -2453,6 +2453,10 @@ hr {
   background: linear-gradient(180deg, rgba(249, 233, 229, 0.5) 0%, rgba(240, 224, 239, 0.5) 100%);
 }
 
+.untest_bg {
+      background: linear-gradient(90deg, rgb(255 255 255) 0%, rgb(210 255 244) 50%);
+}
+
 .cs_form_field {
   border: 1px solid var(--border);
   display: block;
@@ -4132,7 +4136,11 @@ hr {
   font-weight: 700;
   text-align: center;
 }
-
+.timeline-section .top_heading p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
     .timeline-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -4217,7 +4225,9 @@ hr {
 
 /* my story content css */
 .capture-app {
+  padding: 3rem 0;
   position: relative;
+  background: linear-gradient(90deg, rgb(255 255 255) 0%, rgb(210 255 244) 50%);
 }
 
 .capture-app .mystory_vector {
@@ -4260,7 +4270,7 @@ hr {
         }
 
         .capture-app .capture-card {
-            /* background: #bff8eb; */
+            background: #ffffff;
             backdrop-filter: blur(20px);
             border-radius: 20px;
             padding: 2rem;
@@ -4374,7 +4384,7 @@ hr {
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background: #bff8eb;
+            background: #2eb190;
             transform: translate(-50% , -100%)  scale(0);
             animation: push_401 2s infinite linear;
           }
@@ -5366,7 +5376,11 @@ hr {
 .testimonials-section {
   margin: 3rem 0;
 }
-
+.testimonials-section .testi_h2 h2 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 50px;
+}
 .testimonial-container {
   width: 100%;
   /* max-width: 56rem; */
@@ -5733,7 +5747,7 @@ hr {
         }
 
         /* Scroll indicator */
-        .jaded-showcase .scroll-indicator {
+       .scroll-indicator {
             position: fixed;
             top: 0;
             left: 0;
@@ -5743,7 +5757,7 @@ hr {
             z-index: 1000;
         }
 
-        .jaded-showcase .scroll-progress {
+       .scroll-progress {
             height: 100%;
             background: linear-gradient(135deg, #16b18a, #00916c);
             width: 0%;
@@ -5922,7 +5936,7 @@ hr {
       border: 4px solid white;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
       transition: all 0.4s ease;
-      animation: float 3s ease-in-out infinite;
+      /* animation: float 3s ease-in-out infinite; */
     }
 
     .profile-card-wrapper .profile-card:hover .avatar {
@@ -6091,11 +6105,404 @@ hr {
 /* profile-card-wrapper */
 
 
-.contact-inner .contact-inner h1 {
-    font-weight: 600;
+.contact-inner h1 {
+    font-weight: 700;
 }
 
 /* contact us */
+
+
+.sec_consalt {
+
+}
+
+.sec_consalt  .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #000000;
+        }
+
+       .sec_consalt  .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+       .sec_consalt  .header p {
+            /* font-size: 1.3rem; */
+            /* opacity: 0.9; */
+            max-width: 600px;
+            margin: 0 auto;
+            /* line-height: 1.6; */
+        }
+
+       .sec_consalt  .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+            margin-top: 5rem;
+        }
+
+      .sec_consalt .calendar-section, .sec_consalt  .form-section {
+            background: #bff8eb61;
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+       .sec_consalt  .calendar-section::before, .sec_consalt  .form-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        }
+
+       .sec_consalt  .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+       .sec_consalt  .calendar {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+       .sec_consalt  .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+       .sec_consalt  .calendar-nav {
+            background: rgb(0 145 108 / 58%);
+            border: none;
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+       .sec_consalt  .calendar-nav:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+       .sec_consalt  .calendar-month {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rgb(0, 0, 0);
+        }
+
+       .sec_consalt  .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+      .sec_consalt .calendar-day-header {
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+        }
+
+       .sec_consalt  .calendar-day {
+            aspect-ratio: 1;
+            border-radius: 8px;
+            border: none;
+            background: rgb(199 203 202);
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            position: relative;
+        }
+
+      .sec_consalt   .calendar-day:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+       .sec_consalt  .calendar-day.available {
+            background: rgb(191 248 235);
+            border: 1px solid rgb(0 145 108 / 19%);
+        }
+
+       .sec_consalt  .calendar-day.selected {
+            background: linear-gradient(135deg, #61bfa7 0%, #1d856d 100%);
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+       .sec_consalt  .calendar-day.disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+       .sec_consalt  .time-slots {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 12px;
+        }
+
+      .sec_consalt   .time-slot {
+            padding: 12px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+                background: rgb(0 145 108 / 59%);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+       .sec_consalt  .time-slot:hover {
+            backgroundrgba(0, 145, 109, 0.801)%);
+            transform: translateY(-2px);
+        }
+
+       .sec_consalt  .time-slot.selected {
+               background: linear-gradient(135deg, #bff8eb 0%, #00916c 100%);
+                border-color: rgb(0 145 108);
+        }
+
+       .sec_consalt  .form-group {
+            margin-bottom: 25px;
+        }
+
+      .sec_consalt   .form-label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.9);
+            margin-bottom: 8px;
+        }
+
+       .sec_consalt  .form-input, .sec_consalt  .form-select, .sec_consalt  .form-textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            background: #ffff;
+            backdrop-filter: blur(10px);
+            color: rgb(0, 0, 0);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+       .sec_consalt  .form-input:focus, .sec_consalt  .form-select:focus, .sec_consalt  .form-textarea:focus {
+            outline: none;
+            border-color: rgba(0, 0, 0, 0.4);
+            background: rgba(69, 233, 184, 0.253);
+            /* box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2); */
+        }
+
+       .sec_consalt  .form-input::placeholder, .sec_consalt  .form-textarea::placeholder {
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+       .sec_consalt  .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+       .sec_consalt  .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+      .sec_consalt   .consultation-types {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+      .sec_consalt   .consultation-type {
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            background: rgb(0 145 108 / 37%);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+       .sec_consalt  .consultation-type:hover {
+            background: rgba(0, 145, 109, 0.747);
+            transform: translateY(-2px);
+        }
+
+      .sec_consalt   .consultation-type.selected {
+            background: linear-gradient(135deg, #95ffe4 0%, #10d7a9 100%);
+            background: #0fc395;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+       .sec_consalt  .consultation-type h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 8px;
+        }
+
+      .sec_consalt   .consultation-type p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.4;
+        }
+
+      .sec_consalt   .book-button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+       .sec_consalt  .book-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+      .sec_consalt   .book-button:active {
+            transform: translateY(0);
+        }
+
+        .sec_consalt .benefits {
+            background: #000000;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+      .sec_consalt   .benefits h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+      .sec_consalt   .benefits-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+       .sec_consalt  .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+        }
+
+       .sec_consalt  .benefit-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00c396 0%, #035e47 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+      .sec_consalt   .floating-shapes {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+      .sec_consalt   .floating-shape {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 8s ease-in-out infinite;
+        }
+
+       .sec_consalt  .floating-shape:nth-child(1) {
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+       .sec_consalt  .floating-shape:nth-child(2) {
+            top: 20%;
+            right: 20%;
+            animation-delay: 3s;
+        }
+
+      .sec_consalt   .floating-shape:nth-child(3) {
+            bottom: 20%;
+            left: 15%;
+            animation-delay: 6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-30px) rotate(180deg); }
+        }
+
+        @media (max-width: 768px) {
+          .sec_consalt   .booking-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+          .sec_consalt   .header h1 {
+                font-size: 2.2rem;
+            }
+            
+          .sec_consalt   .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+           .sec_consalt  .consultation-types {
+                grid-template-columns: 1fr;
+            }
+            
+           .sec_consalt  .benefits-list {
+                grid-template-columns: 1fr;
+            }
+            
+           .sec_consalt  .calendar-section, .form-section {
+                padding: 30px 20px;
+            }
+        }
+
 
 /* Main container for the entire section */
         section.contact-form {
@@ -8852,7 +9259,7 @@ footer .cs_fs_90 {
     height: inherit;
   }
   .cs_nav .cs_nav_list > li {
-    margin-right: 40px;
+    margin-right: 25px;
     height: inherit;
   }
   .cs_nav .cs_nav_list > li:last-child {
@@ -8860,6 +9267,7 @@ footer .cs_fs_90 {
   }
   .cs_nav .cs_nav_list > li > a {
     padding: 10px 0;
+    font-size: 15px;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;

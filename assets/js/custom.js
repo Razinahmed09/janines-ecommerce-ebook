@@ -353,9 +353,9 @@ const images = [
             },
             {
                 quote: "Janine combines deep therapeutic knowledge with heartfelt biblical encouragement. I felt understood and supported without feeling overwhelmed. Her eBooks are like devotional therapy sessions. Truly a gift to anyone seeking faith-based healing.",
-                name: "Joe Charlescraft",
+                name: "Lora Mitchel",
                 designation: "Christian Counselor",
-                src: "/assets/img/janies-Ebooks/testi-man.jpg",
+                src: "/assets/img/janies-Ebooks/un-testi.jpg",
             },
             {
                 quote: "Janine speaks directly to the struggles we carry silently. Her books helped me reconnect with God and myself. They are filled with honesty, scripture, and gentle wisdom. I keep returning to them whenever I need peace.",
