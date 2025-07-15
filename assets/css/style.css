@@ -4118,26 +4118,131 @@ hr {
 /* about us section */
 
 
-/* my story content css */
+/* timeline css */
 
+.timeline-section {
+      position: relative;
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+.timeline-section h1 {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 80px;
+      /* opacity: 0; */
+      transform: translateY(40px);
+      transition: all 0.6s ease-in-out;
+    }
+
+    .timeline-row.show {
+      /* opacity: 1; */
+      transform: translateY(0);
+    }
+
+    .timeline-img {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .timeline-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .timeline-text {
+      /* background-color: #fdfbff; */
+      padding: 30px;
+      border-radius: 20px;
+      /* box-shadow: 0 10px 25px rgba(0,0,0,0.05); */
+    }
+   .timeline-text .icon_parent {
+    background-color: #004225;
+    border-radius: 15px;
+    padding: 6px 8px;
+    display: flex;
+    margin-right: 10px;
+   }
+   .timeline-text lord-icon {
+    width: 40px;
+    height: 45px;
+   }
+   .timeline-text ul{
+    padding-left: 0;
+   }
+   .timeline-text ul li {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    line-height: 1.2;
+    margin: 8px 0;
+   }
+   .timeline-section ul li {
+    list-style:none;
+   }
+    .timeline-text h2 {
+      font-weight: 700;
+      /* font-size: 1.6rem; */
+      margin-bottom: 15px;
+    }
+
+    .timeline-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+      .timeline-row:nth-child(even) {
+        direction: rtl;
+      }
+
+      .timeline-row:nth-child(even) .timeline-text {
+        direction: ltr;
+      }
+    }
+
+/* timeline css */
+
+
+/* my story content css */
+.capture-app {
+  position: relative;
+}
+
+.capture-app .mystory_vector {
+  position: absolute;
+  left: 0;
+}
 .capture-app .header {
             text-align: center;
             margin-bottom: 3rem;
             animation: fadeInUp 0.8s ease-out;
+            position: relative;
         }
 
         .capture-app .header h1 {
-            color: rgb(0, 0, 0);
+           color: var(--primary);
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            /* text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
         }
 
         .capture-app .header p {
             color: rgba(0, 0, 0, 0.9);
-            font-size: 1.2rem;
-            font-weight: 300;
+            font-size: 20px;
+            font-weight: 400;
         }
 
         /* .capture-app .capture-grid {
@@ -4167,10 +4272,10 @@ hr {
             border-top: 3px solid #00916c;
             border-bottom: 3px solid #00916c;
         }
-        .capture_un{
+        /* .capture_un{
           background: #bff8eb;
           border: none !important;
-        }
+        } */
        
         .capture-app .capture-card:hover {
             transform: translateY(-5px);
@@ -4211,7 +4316,7 @@ hr {
             transform: scale(1.1);
         }
         .capture_un .card-icon {
-          background-color: white !important; 
+          background-color: #bff8eb !important;
         }
         .card-icon lord-icon {
           width: 60px;
@@ -4233,13 +4338,13 @@ hr {
         }
 
         .capture-app .capture-card .upload-area {
-                border: 2px dashed rgb(0 145 108);
+                border: 2px dashed #00916c;
                 border-radius: 15px;
                     padding: 4rem;
                 text-align: center;
                 transition: all 0.3s ease;
                 margin-top: 1rem;
-                background: #07070726;
+                   background: #bff8eb6b;
         }
         
         .capture-app .capture-card .upload-area:hover {
@@ -4247,8 +4352,50 @@ hr {
             background: rgba(255, 255, 255, 0.05);
             /* color: black; */
         }
+
+        .un_vectors {
+              position: absolute;
+              right: 348px;
+              top: 76px;
+        }
+
+        .un_vectors .loader {
+            display: block;
+            width: 84px;
+            height: 84px;
+            position: relative;
+          }
+
+          .un_vectors .loader:before , .un_vectors .loader:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: #bff8eb;
+            transform: translate(-50% , -100%)  scale(0);
+            animation: push_401 2s infinite linear;
+          }
+
+          .un_vectors .loader:after {
+            animation-delay: 1s;
+          }
+
+          @keyframes push_401 {
+            0% , 50% {
+              transform: translate(-50% , 0%)  scale(1)
+            }
+
+            100% {
+              transform: translate(-50%, -100%) scale(0)
+            }
+          }
+
          .capture-app .capture-card .upload-area p {
            transition: all 0.3s ease;
+           color: black !important;
          }
 
         .capture-app .capture-card .upload-area:hover p {
