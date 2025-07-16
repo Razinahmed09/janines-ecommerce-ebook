@@ -16,82 +16,19 @@
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
     <!-- Start Header Section -->
-    <header class="cs_site_header cs_style_1 cs_primary_color cs_sticky_header">
-      <div class="cs_main_header">
-        <div class="container-fluid">
-          <div class="cs_main_header_in">
-            <div class="cs_main_header_left">
-              <a class="cs_site_branding" href="index.html">
-                <img src="assets/img/logo.svg" alt="Logo">
-              </a>
-            </div>
-            <div class="cs_main_header_center cs_center_full_width">
-              <div class="cs_nav">
-                <div class="cs_nav_list_wrap">
-                  <ul class="cs_nav_list">
-                    <li class="menu-item-has-children">
-                      <a href="index.html">Home</a>
-                      <ul>
-                        <li><a href="index.html">Lifestyle</a></li>
-                        <li><a href="podcast.html">Podcast</a></li>
-                        <li><a href="creative.html">Creative</a></li>
-                        <li><a href="fashion.html">Fashion</a></li>
-                        <li><a href="cooking.html">Cooking</a></li>
-                        <li><a href="travel.html">Travel</a></li>
-                        <li><a href="dev.html">DEV</a></li>
-                        <li><a href="classic.html">Classic</a></li>
-                        <li><a href="personal.html">Personal</a></li>
-                        <li><a href="masonary.html">Masonary</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="episodes.html">EPISODES</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li class="menu-item-has-children">
-                      <a href="#">Pages</a>
-                      <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="episodes.html">Episodes</a></li>
-                        <li><a href="archive.html">Archive</a></li>
-                      </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                      <a href="blogs.html">Blogs</a>
-                      <ul>
-                        <li><a href="blogs.html">Blog Grid</a></li>
-                        <li><a href="blog-details.html">Blog Details</a></li>
-                        <li><a href="blog-details-v2.html">Blog Details V2</a></li>
-                        <li><a href="blog-details-v3.html">Blog Details V3</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="cs_main_header_right">
-              <div class="cs_header_btns">
-                <button class="cs_search_toggle_btn" type="button">
-                  <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g>
-                    <path d="M24.9999 24.0271L18.477 17.5042C20.1714 15.4319 21.0045 12.7876 20.8039 10.1183C20.6033 7.44901 19.3845 4.9589 17.3995 3.16306C15.4144 1.36722 12.8151 0.40303 10.1391 0.469938C7.46312 0.536846 4.91521 1.62973 3.02241 3.52253C1.12961 5.41533 0.036724 7.96324 -0.0301841 10.6392C-0.0970923 13.3152 0.867093 15.9146 2.66294 17.8996C4.45878 19.8846 6.94889 21.1035 9.61819 21.304C12.2875 21.5046 14.9318 20.6715 17.0041 18.9771L23.527 25.5L24.9999 24.0271ZM10.4166 19.25C8.76838 19.25 7.15722 18.7613 5.78681 17.8456C4.4164 16.9299 3.3483 15.6284 2.71757 14.1057C2.08683 12.583 1.92181 10.9074 2.24335 9.29093C2.56489 7.67442 3.35857 6.18956 4.52401 5.02413C5.68944 3.85869 7.1743 3.06502 8.79081 2.74347C10.4073 2.42193 12.0829 2.58696 13.6056 3.21769C15.1283 3.84842 16.4298 4.91652 17.3455 6.28693C18.2612 7.65734 18.7499 9.26851 18.7499 10.9167C18.7474 13.1261 17.8686 15.2442 16.3064 16.8065C14.7441 18.3688 12.6259 19.2475 10.4166 19.25Z" fill="currentColor"/>
-                    </g>
-                    <defs>
-                    <clipPath>
-                    <rect width="25" height="25" fill="white" transform="translate(0 0.5)"/>
-                    </clipPath>
-                    </defs>
-                  </svg>                  
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    <div id="navbar-container"></div>
+    <script>
+      fetch('navbar.html')
+      .then(Response => Response.text())
+      .then(data => {
+        document.getElementById('navbar-container').innerHTML = data;
+      })
+    </script>
     <div class="cs_modal_search cs_center">
       <div class="cs_search_overlay cs_header_overlay"></div>
       <form action="#" class="cs_modal_search_form">
@@ -106,11 +43,12 @@
     <!-- End Header Section -->
     <!-- Start Hero Section -->
     <section class="cs_hero cs_style_2 text-center">
-      <div class="container-fluid">
+      <div class="container-fluid" data-aos="flip-left"
+                data-aos-duration="1500">
         <h1 class="cs_hero_title cs_fs_90 cs_medium mb-0">DIVE INTO A WORLD OF STORIES, INSIGHT, AND INSPIRATION</h1>
         <div class="cs_height_72 cs_height_lg_50"></div>
         <div class="cs_hero_video_block">
-          <img src="assets/img/hero_video_block.webp" alt="Thumb" class="cs_hero_thumb">
+          <img src="assets/img/janies-Ebooks/podcast.png" alt="Thumb" class="cs_hero_thumb">
           <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_play_btn_1 cs_primary_color cs_white_bg cs_center cs_video_open">
             <svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.615 9.96124L10.6925 1.21874C9.76129 0.53685 8.65944 0.126135 7.50909 0.0321227C6.35874 -0.0618891 5.20482 0.164475 4.17524 0.686124C3.14566 1.20777 2.28064 2.00433 1.67606 2.9875C1.07148 3.97068 0.750951 5.10206 0.750008 6.25624V23.75C0.748212 24.9053 1.06706 26.0385 1.67107 27.0233C2.27508 28.0082 3.14054 28.8061 4.17112 29.3282C5.20171 29.8504 6.35698 30.0763 7.50835 29.9809C8.65971 29.8854 9.762 29.4723 10.6925 28.7875L22.615 20.045C23.4061 19.4644 24.0494 18.7058 24.4928 17.8304C24.9362 16.955 25.1672 15.9875 25.1672 15.0062C25.1672 14.025 24.9362 13.0575 24.4928 12.1821C24.0494 11.3067 23.4061 10.5481 22.615 9.96749V9.96124Z" fill="currentColor"/>
@@ -122,81 +60,44 @@
       </div>
     </section>
     <!-- End Hero Section -->
-    <!-- Start Moving Text Section -->
-    <div class="cs_height_145 cs_height_lg_70"></div>
-    <div class="cs_moving_section_wrap cs_style_2 cs_primary_color">
-      <div class="cs_moving_section_in cs_fs_45">
-        <div class="cs_moving_section cs_moving_duration_40">
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>MIX CLOUDS</span>
-          </div>
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>APPLE PODCAST</span>
-          </div>
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>SPOTIFY</span>
-          </div>
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>GOOGLE PODCAST</span>
-          </div>
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>SOUNDCLOUDS</span>
-          </div>
-        </div>
-        <div class="cs_moving_section cs_moving_duration_40">
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>MIX CLOUDS</span>
-          </div>
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>APPLE PODCAST</span>
-          </div>
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>SPOTIFY</span>
-          </div>
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>GOOGLE PODCAST</span>
-          </div>
-          <div class="cs_moving_section_item">
-            <img src="assets/img/icons/microphone.svg" alt="">
-            <span>SOUNDCLOUDS</span>
-          </div>
-        </div>
+
+ <!-- collabration section -->
+
+ <div class="cs_moving_section_wrap cs_style_1">
+      <div class="cs_moving_section_in cs_fs_128">
+        <div class="cs_moving_section cs_moving_duration_40"> Videos Podcast & Episodes </div>
+        <div class="cs_moving_section cs_moving_duration_40"> Videos Podcast & Episodes </div>
       </div>
     </div>
-    <div class="cs_height_145 cs_height_lg_70"></div>
+
+  <!-- collabration section -->
+
+
     <!-- Start Moving Text Section -->
     <!-- Start Latest Episode Section -->
     <section class="cs_gray_bg_2">
       <div class="cs_height_140 cs_height_lg_75"></div>
       <div class="container-fluid">
-        <div class="cs_section_heading cs_style_1">
-          <h2 class="cs_section_title cs_fs_90 mb-0">Tune in to Our Latest Episode</h2>
+        <div class="cs_section_heading cs_style_1" data-aos="zoom-out" data-aos-duration="1500">
+          <h2 class="cs_section_title cs_fs_90 mb-0">Listen to Our Latest Podcast</h2>
           <div class="cs_section_right">
             <p class="cs_fs_23 cs_mb_37 cs_mb_xl_25">Dive into our newest episode for captivating stories, insightful discussions, and endless inspiration. Tune in now!</p>
-            <a href="episodes.html" class="cs_btn cs_style_2 cs_fs_23 cs_primary_color">Explore More</a>
+            <!-- <a href="episodes.html" class="cs_btn cs_style_2 cs_fs_23 cs_primary_color">Explore More</a> -->
           </div>
         </div>
         <div class="cs_height_90 cs_height_lg_50"></div>
         <div class="cs_slider cs_style_1 cs_slider_gap_40">
           <div class="cs_slider_container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0" data-variable-width="0" data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="4" data-add-slides="4">
             <div class="cs_slider_wrapper">
-              <div class="cs_slide">
+              <div class="cs_slide" data-aos="flip-left"
+                data-aos-duration="1500">
                 <div class="cs_post cs_style_5 cs_radius_15 cs_zoom">
-                  <a href="blog-details.html" class="cs_post_thumb d-block">
-                    <img src="assets/img/post_9.webp" alt="Thumb" class="cs_zoom_in">
+                  <a href="#" class="cs_post_thumb d-block">
+                    <img src="assets/img/janies-Ebooks/video1.jpg" alt="Thumb" class="cs_zoom_in">
                   </a>
                   <div class="cs_post_info">
-                    <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Travel</p>
-                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="blog-details.html">Embracing Change: Navigating Life's Transitions</a></h2>
+                    <!-- <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Travel</p> -->
+                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="#">Healing Through Faith</a></h2>
                   </div>
                   <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_play_btn_1 cs_primary_color cs_white_bg cs_center cs_video_open">
                     <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -205,14 +106,15 @@
                   </a>
                 </div>
               </div>
-              <div class="cs_slide">
+              <div class="cs_slide" data-aos="flip-left"
+                data-aos-duration="1500">
                 <div class="cs_post cs_style_5 cs_radius_15 cs_zoom">
-                  <a href="blog-details.html" class="cs_post_thumb d-block">
-                    <img src="assets/img/post_10.webp" alt="Thumb" class="cs_zoom_in">
+                  <a href="#" class="cs_post_thumb d-block">
+                    <img src="assets/img/janies-Ebooks/video2.jpg" alt="Thumb" class="cs_zoom_in">
                   </a>
                   <div class="cs_post_info">
-                    <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Finance</p>
-                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="blog-details.html">Debt-Free Journey: Breaking the Chains of Financial Burden</a></h2>
+                    <!-- <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Finance</p> -->
+                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="#">The Power of Stillness</a></h2>
                   </div>
                   <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_play_btn_1 cs_primary_color cs_white_bg cs_center cs_video_open">
                     <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -221,14 +123,15 @@
                   </a>
                 </div>
               </div>
-              <div class="cs_slide">
+              <div class="cs_slide" data-aos="flip-left"
+                data-aos-duration="1500">
                 <div class="cs_post cs_style_5 cs_radius_15 cs_zoom">
-                  <a href="blog-details.html" class="cs_post_thumb d-block">
-                    <img src="assets/img/post_11.webp" alt="Thumb" class="cs_zoom_in">
+                  <a href="#" class="cs_post_thumb d-block">
+                    <img src="assets/img/janies-Ebooks/video4.jpg" alt="Thumb" class="cs_zoom_in">
                   </a>
                   <div class="cs_post_info">
-                    <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Fashion</p>
-                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="blog-details.html">The Art of Connection: Building Meaningful Relationships</a></h2>
+                    <!-- <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Fashion</p> -->
+                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="#">Breaking Free from Burnout</a></h2>
                   </div>
                   <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_play_btn_1 cs_primary_color cs_white_bg cs_center cs_video_open">
                     <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -237,14 +140,15 @@
                   </a>
                 </div>
               </div>
-              <div class="cs_slide">
+              <div class="cs_slide" data-aos="flip-left"
+                data-aos-duration="1500">
                 <div class="cs_post cs_style_5 cs_radius_15 cs_zoom">
-                  <a href="blog-details.html" class="cs_post_thumb d-block">
-                    <img src="assets/img/post_12.webp" alt="Thumb" class="cs_zoom_in">
+                  <a href="#" class="cs_post_thumb d-block">
+                    <img src="assets/img/janies-Ebooks/video44.jpg" alt="Thumb" class="cs_zoom_in">
                   </a>
                   <div class="cs_post_info">
-                    <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Lifestyle</p>
-                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="blog-details.html">Embracing Change: Navigating Life's Transitions</a></h2>
+                    <!-- <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Lifestyle</p> -->
+                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="#">Resilient by Grace</a></h2>
                   </div>
                   <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_play_btn_1 cs_primary_color cs_white_bg cs_center cs_video_open">
                     <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -253,14 +157,15 @@
                   </a>
                 </div>
               </div>
-              <div class="cs_slide">
+              <div class="cs_slide" data-aos="flip-left"
+                data-aos-duration="1500">
                 <div class="cs_post cs_style_5 cs_radius_15 cs_zoom">
-                  <a href="blog-details.html" class="cs_post_thumb d-block">
-                    <img src="assets/img/post_10.webp" alt="Thumb" class="cs_zoom_in">
+                  <a href="#" class="cs_post_thumb d-block">
+                    <img src="assets/img/janies-Ebooks/video5.jpg" alt="Thumb" class="cs_zoom_in">
                   </a>
                   <div class="cs_post_info">
-                    <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Finance</p>
-                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="blog-details.html">Debt-Free Journey: Breaking the Chains of Financial Burden</a></h2>
+                    <!-- <p class="cs_post_meta cs_mb_21 cs_fs_23 cs_accent_color">Finance</p> -->
+                    <h2 class="cs_post_title mb-0 cs_fs_32 cs_white_color"><a href="#">From Trauma to Testimony</a></h2>
                   </div>
                   <a href="https://www.youtube.com/embed/rRid6GCJtgc" class="cs_play_btn_1 cs_primary_color cs_white_bg cs_center cs_video_open">
                     <svg width="13" height="16" viewBox="0 0 13 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -278,7 +183,7 @@
     </section>
     <!-- End Latest Episode Section -->
     <!-- Start About Section -->
-    <section>
+    <!-- <section>
       <div class="cs_height_140 cs_height_lg_75"></div>
       <div class="container">
         <div class="cs_about cs_style_1 text-center">
@@ -293,10 +198,10 @@
         </div>
       </div>
       <div class="cs_height_150 cs_height_lg_80"></div>
-    </section>
+    </section> -->
     <!-- End About Section -->
     <!-- Start CTA Section -->
-    <section class="cs_cta cs_style_1 text-center cs_primary_bg cs_bg_filed" data-src="assets/img/cta_bg.webp">
+    <!-- <section class="cs_cta cs_style_1 text-center cs_primary_bg cs_bg_filed" data-src="assets/img/cta_bg.webp">
       <div class="container">
         <div class="cs_cta_in">
           <h2 class="cs_cta_title cs_white_color cs_mb_27 cs_fs_90">Support us on Patreon!</h2>
@@ -304,10 +209,10 @@
           <a href="#" class="cs_btn cs_style_3 cs_fs_23">Become A Patreon</a>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- End CTA Section -->
     <!-- Start Popular Topic Section -->
-    <section>
+    <!-- <section>
       <div class="cs_height_140 cs_height_lg_75"></div>
       <div class="container-fluid">
         <div class="cs_section_heading cs_style_1">
@@ -417,10 +322,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- End Popular Topic Section -->
     <!-- Start Brands Section -->
-    <div class="container-fluid">
+    <!-- <div class="container-fluid">
       <div class="cs_height_140 cs_height_lg_75"></div>
       <h2 class="text-center cs_fs_90 mb-0">Our Sponsors</h2>
       <div class="cs_height_90 cs_height_lg_50"></div>
@@ -462,10 +367,10 @@
         <div class="cs_pagination cs_style_2 cs_mobile_show"></div>
       </div>
       <div class="cs_height_150 cs_height_lg_80"></div>
-    </div>
+    </div> -->
     <!-- End Brands Section -->
     <!-- Start Testimonial Section -->
-    <section class="cs_gradient_bg">
+    <!-- <section class="cs_gradient_bg">
       <div class="cs_height_150 cs_height_lg_80"></div>
       <div class="container-fluid">
         <div class="cs_testimonial_1_wrap">
@@ -536,62 +441,41 @@
         </div>
       </div>
       <div class="cs_height_150 cs_height_lg_80"></div>
-    </section>
+    </section> -->
     <!-- End Testimonial Section -->
     <!-- Start Footer Section -->
-    <footer class="cs_footer cs_style_2">
-      <div class="cs_footer_in cs_fs_23">
-        <div class="container-fluid">
-          <div class="cs_footer_row_1">
-            <div class="cs_footer_col">
-              <div class="cs_widget">
-                <div class="cs_text_widget">
-                  <img src="assets/img/footer_logo.svg" alt="">
-                  <p>Where your podcasting journey gets a power boost with  our online studio. Experience an all-in-one platform designed to craft  captivating audio content with ease!</p>
-                </div>
-                <div class="cs_social_links cs_style_1">
-                  <a href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-                  <a href="#"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
-                  <a href="#"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-                </div>
-              </div>
-            </div>
-            <div class="cs_footer_col">
-              <div class="cs_widget">
-                <h2 class="cs_widget_title cs_fs_32">Explore</h2>
-                <ul class="cs_footer_menu_2 cs_mp_0">
-                  <li><a href="#">HOME</a></li>
-                  <li><a href="#">ABOUT ME</a></li>
-                  <li><a href="#">EPISODES</a></li>
-                  <li><a href="#">PATREON</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="cs_footer_col">
-              <div class="cs_widget">
-                <h2 class="cs_widget_title cs_fs_32">Contact Info</h2>
-                <div class="cs_contact_info_list">
-                  Phone : +44 410 888 33314 <br>
-                  Email : <a href="https://html.laralink.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b3daddd5dcf3c7c1d2c5d6ddc3dcd7d0d2c0c79dd0dcde">[email&#160;protected]</a> <br>
-                  Address : 775 Horace Village, New <br>Coleman, United States of America
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid">
-        <div class="cs_copyright text-center">All Rights Reserved Copyright © 2024 - Laralink</div>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
+    <script>
+      fetch('footer.html')
+      .then(Response => Response.text())
+      .then(data => {
+        document.getElementById('footer-container').innerHTML = data;
+      })
+    </script>
     <!-- End Footer Section -->
     
     <!-- Script -->
-    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/jquery.slick.min.js"></script>
-    <script src="assets/js/isotope.pkg.min.js"></script>
-    <script src="assets/js/main.js"></script>
-  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'951271829e4bcdfe',t:'MTc1MDE2MjIyMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='../cdn-cgi/challenge-platform/h/g/scripts/jsd/180b6a431d85/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"951271829e4bcdfe","version":"2025.6.2","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"6f756f02820545e3be40ddc6eb6154c3","b":1}' crossorigin="anonymous"></script>
+  <script src="assets/js/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/jquery.slick.min.js"></script>
+  <script src="assets/js/isotope.pkg.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'95127171da69ce6f',t:'MTc1MDE2MjIxOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='../cdn-cgi/challenge-platform/h/g/scripts/jsd/180b6a431d85/maind41d.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
+    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
+    data-cf-beacon='{"rayId":"95127171da69ce6f","version":"2025.6.2","r":1,"serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"token":"6f756f02820545e3be40ddc6eb6154c3","b":1}'
+    crossorigin="anonymous"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+
+  </script>
+  <script src="/assets/js/custom.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 <!-- Mirrored from html.laralink.com/traven/podcast.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 Jun 2025 12:10:49 GMT -->
